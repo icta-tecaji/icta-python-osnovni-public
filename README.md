@@ -6,6 +6,5 @@
 - Data_parsing
 - Objektno programiranje
 - Testiranje_kode (pytest)
-- 
 
 
