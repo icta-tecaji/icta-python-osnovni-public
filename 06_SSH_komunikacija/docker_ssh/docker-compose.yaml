@@ -1,0 +1,10 @@
+version:  '3'
+services:
+  ssh-telnet-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2022:22"
+      - "2023:23"
+    hostname: ssh-telnet-test
