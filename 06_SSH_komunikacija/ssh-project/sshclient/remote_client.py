@@ -1,6 +1,8 @@
-from paramiko import SSHClient, AutoAddPolicy
+import os
 from typing import Dict, List
-from scp import SCPClient
+from pathlib import Path
+from paramiko import AutoAddPolicy, SSHClient
+from scp import SCPClient, SCPException
 
 
 class BadAuthenticationModeError(Exception):
@@ -9,6 +11,13 @@ class BadAuthenticationModeError(Exception):
 
 class RemoteCommandExecutionErrorCode(Exception):
     pass
+
+
+def get_default_path() -> str:
+    return os.getcwd()
+
+
+DEFAULT_PATH = get_default_path()
 
 
 class RemoteClient:
@@ -94,6 +103,38 @@ class RemoteClient:
         for command in commands:
             merged_results[command] = self.execute_command(command, verbose=verbose)
         return merged_results
+
+    def _download_file(self, remote_path: str, local_path: str):
+        """Download file from remote host."""
+        if not self.client:
+            self.client = self.__connect()
+        try:
+            self.scp.get(remote_path, local_path)
+        except SCPException:
+            print(f"  -> File missing. Skipping downloading file {remote_path}.")
+            self.client = None
+
+    def download_files(
+        self, remote_paths: List[str], local_save_location: str = DEFAULT_PATH
+    ) -> None:
+        os.makedirs(local_save_location, exist_ok=True)
+        for remote_path in remote_paths:
+            remote_file_name = Path(remote_path).name
+            local_path = os.path.join(local_save_location, remote_file_name)
+            print(f"Downloading file: {remote_file_name} to local folder: {local_path}")
+            self._download_file(remote_path, local_path)
+
+    def download_folder(self):
+        pass
+
+    def _upload_file(self):
+        pass
+
+    def upload_files(self):
+        pass
+
+    def upload_folder(self):
+        pass
 
     def disconnect(self):
         """Close SSH connection."""
