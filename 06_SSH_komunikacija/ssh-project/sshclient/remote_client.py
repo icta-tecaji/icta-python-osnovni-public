@@ -1,8 +1,11 @@
 import os
 from typing import Dict, List
 from pathlib import Path
+import getpass
 from paramiko import AutoAddPolicy, SSHClient
+import paramiko
 from scp import SCPClient, SCPException
+import sys
 
 
 class BadAuthenticationModeError(Exception):
@@ -43,6 +46,13 @@ class RemoteClient:
         self.client: SSHClient = None
         self.scp: SCPClient = None
 
+    def _load_credentials(self, name: str) -> str:
+        secret_value = os.environ.get(name)
+        if secret_value:
+            return secret_value
+        secret_value = getpass.getpass(f"Enter value for {name}: ")
+        return secret_value
+
     def __connect(self):
         """Open connection to a remote host."""
         self.client = SSHClient()
@@ -52,23 +62,35 @@ class RemoteClient:
         # set clinet mode
         # TODO June 08, 2022: dodaj error handling
         if self.authentication_mode == "password":
-            # TODO June 08, 2022: dodaj nalaganje passworda iz zunanjih virov
-            self.client.connect(
-                self.host,
-                username=self.user,
-                timeout=5000,
-                port=self.port,
-                password=self.password,
-            )
+            if not self.password:
+                self.password = self._load_credentials(name="SSH_SCRIPT_PASSWORD")
+            try:
+                self.client.connect(
+                    self.host,
+                    username=self.user,
+                    timeout=5000,
+                    port=self.port,
+                    password=self.password,
+                )
+            except paramiko.AuthenticationException:
+                print("Wrong password! Try again!")
+                self.password = None
+                self.__connect()
         elif self.authentication_mode == "passphrase":
-            # TODO June 08, 2022: dodaj nalaganje passworda iz zunanjih virov
-            self.client.connect(
-                self.host,
-                username=self.user,
-                timeout=5000,
-                port=self.port,
-                passphrase=self.passphrase,
-            )
+            if not self.passphrase:
+                self.passphrase = self._load_credentials(name="SSH_SCRIPT_PASSPHRASE")
+            try:
+                self.client.connect(
+                    self.host,
+                    username=self.user,
+                    timeout=5000,
+                    port=self.port,
+                    passphrase=self.passphrase,
+                )
+            except paramiko.SSHException:
+                print("Wrong passphrase! Try again!")
+                self.passphrase = None
+                self.__connect()
         else:
             raise BadAuthenticationModeError(
                 "Please use password or passphrase option for authentication_mode!"
