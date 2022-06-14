@@ -205,6 +205,23 @@ class RemoteClient:
             print(f"Error while uploading folder. Describtion: {err}")
             self.client = None
 
+    def execute_sudo_command(self, command: str, sudo_password: str) -> None:
+        """Execute a single command."""
+        if not self.client:
+            self.client = self.__connect()
+        sdtin, sdtout, sdterr = self.client.exec_command(command)
+        sdtin.write(f"{sudo_password}")
+        sdtin.flush()
+        status_code: int = sdtout.channel.recv_exit_status()
+        if status_code != 0:
+            print(f"--> ERROR EXECUTING COMMAND: {command}")
+            raise RemoteCommandExecutionErrorCode(
+                f"\nCommand error ->\nStatus: {status_code}\nMessage:\n{sdterr.read().decode()}"
+            )
+        stdout_text = sdtout.read().decode()
+        print(f"--> EXECUTING COMMAND: {command}")
+        print(stdout_text)
+
     def disconnect(self):
         """Close SSH connection."""
         if self.client:
