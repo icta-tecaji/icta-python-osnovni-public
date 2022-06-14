@@ -1,11 +1,11 @@
-import os
-from typing import Dict, List
-from pathlib import Path
 import getpass
-from paramiko import AutoAddPolicy, SSHClient
+import os
+from pathlib import Path
+from typing import Dict, List
+
 import paramiko
+from paramiko import AutoAddPolicy, SSHClient
 from scp import SCPClient, SCPException
-import sys
 
 
 class BadAuthenticationModeError(Exception):

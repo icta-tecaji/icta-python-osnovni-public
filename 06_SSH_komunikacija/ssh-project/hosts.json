@@ -1,0 +1,22 @@
+{
+    "hosts": [
+        {
+            "name": "ssh-telnet-test-1",
+            "ip": "212.101.140.9",
+            "port": 2022,
+            "username": "testuser"
+        },
+        {
+            "name": "ssh-telnet-test-2",
+            "ip": "212.101.140.9",
+            "port": 2024,
+            "username": "testuser"
+        },
+        {
+            "name": "ssh-telnet-test-3",
+            "ip": "212.101.140.9",
+            "port": 2026,
+            "username": "testuser"
+        }
+    ]
+}
