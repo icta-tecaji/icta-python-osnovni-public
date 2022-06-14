@@ -15,6 +15,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # create new user plume
 RUN useradd -m -s /bin/bash testuser
 RUN echo 'testuser:test' | chpasswd
+RUN usermod -aG sudo testuser
 
 WORKDIR /home/testuser
 
