@@ -1,10 +1,15 @@
-# izobrazevanje-python-osnovni-plume
+# ICTA: Python osnovni tečaj
 
-- Pregled sitakse
-- Reading_and_writing_files
-- Komunikacija_z_APIji
-- Data_parsing
-- Objektno programiranje
-- Testiranje_kode (pytest)
+Vsebina za tečaj: Python osnovni tečaj
 
+
+## Vsebina
+
+### [Uvod v Python ekosistem](./01_Uvod_v_Python_ekosistem/README.md)
+
+- Kako deluje program na računalniku?
+- Uvod v programske jezike
+- Pregled osnovnih pojmov
+- Uvod v Python
+- Predstavitev Python dokumentacije in virov za lastno učenje
 
