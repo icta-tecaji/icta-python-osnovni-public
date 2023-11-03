@@ -1,7 +1,8 @@
+wheel
+
 -r requirements.txt
 
-notebook
 flake8
 black
-rope
-pytest==7.1.2
+isort
+notebook
