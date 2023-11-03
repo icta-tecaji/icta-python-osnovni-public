@@ -85,17 +85,6 @@ When you start typing print, notice how IntelliSense presents auto-completion op
 
 Click the **Run Python File in Terminal** play button in the top-right side of the editor.
 
-Return to the Explorer view (the top-most icon on the left side, which shows files), open `hello.py`, and paste in the following source code:
-
-```python
-import numpy as np
-
-msg = "Roll a dice"
-print(msg)
-
-print(np.random.randint(1,9))
-```
-
 Create the `requirements.txt` file in the root of the project folder (`hello`) and add the following content:
 
 ```
@@ -135,21 +124,19 @@ Create a `.vscode` folder in the project root. In the new folder create a file `
 
 ```json
 {
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.diagnosticMode": "workspace",
-  "python.linting.pylintEnabled": false,
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--max-line-length=160"],
-  "python.formatting.provider": "none",
-  "python.linting.lintOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
-  }
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    "flake8.importStrategy": "fromEnvironment",
+    "flake8.args": [
+        "--max-line-length=180",
+    ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+    }    
 }
 ```
 
