@@ -64,9 +64,9 @@ A best practice among Python developers is to use a project-specific virtual env
 - Be sure you are in the "hello" folder you created above.
 - Create a virtual environment: `python -m venv .venv`
 - Activate the virtual environment: `.venv\Scripts\activate`
-- Upgrade pip in the virtual environment: 
-    - `python -m pip install --upgrade pip`
-    - `pip install --upgrade setuptools`
+- Upgrade pip in the virtual environment:
+  - `python -m pip install --upgrade pip`
+  - `pip install --upgrade setuptools`
 
 Open the Command Palette (`Ctrl+Shift+P`), start typing `Python: Select Interpreter` command from the Command Palette. Select the Python interpreter associated with the virtual environment you created above (ex. `Python 3.11.3 ('.venv':'.venv')`).
 
@@ -108,6 +108,7 @@ Install the following extensions for VS Code:
 Not all packages that you install during the development of your applications will be production dependencies. For example, you’ll probably want to test your application, so you need a test framework. A popular framework for testing is pytest. You want to install it in your development environment, but you don’t want it in your production environment, because it isn’t a production dependency.
 
 You create a second requirements file, `requirements_dev.txt`, to list additional tools to set up a development environment:
+
 ```
 wheel
 
@@ -124,25 +125,25 @@ Create a `.vscode` folder in the project root. In the new folder create a file `
 
 ```json
 {
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.diagnosticMode": "workspace",
-    "flake8.importStrategy": "fromEnvironment",
-    "flake8.args": [
-        "--max-line-length=180",
-    ],
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-    }    
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "editor.formatOnSave": true,
+  "flake8.importStrategy": "fromEnvironment",
+  "flake8.args": ["--max-line-length=180"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  }
 }
 ```
 
 Try to save the file `hello.py` and see what happens.
 
 ## Namestitev in uporaba Jupyter Notebook
+
 - [The Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/)
 - [Jupyter Notebook: An Introduction](https://realpython.com/jupyter-notebook-introduction/)
 - [Installing Jupyter](https://jupyter.org/install)
@@ -160,11 +161,13 @@ Jupyter Notebooks are a spin-off project from the IPython project, which used to
 Install the classic Jupyter Notebook with: `pip install notebook`. You can also add it to the `requirements.txt` file.
 
 For starting the Jupyter Notebook Server just go to that location in your terminal and run the following command:
+
 - `jupyter notebook`
 
 This will start up Jupyter and your default browser should start (or open a new tab) to the following URL: `http://localhost:8888/tree`
 
 We will learn the following:
+
 - Creating a Notebook
 - Running Cells
 - The Menus
@@ -174,9 +177,10 @@ We will learn the following:
 - Exporting Notebooks
 
 ### Jupyter Notebooks in VS Code
+
 - [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
-Visual Studio Code supports working with Jupyter Notebooks natively, and through Python code files. 
+Visual Studio Code supports working with Jupyter Notebooks natively, and through Python code files.
 
 > If not already installed, install the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension for VS Code.
 
@@ -185,4 +189,5 @@ To work with Python in Jupyter Notebooks, you must activate an Anaconda environm
 Once the appropriate environment is activated, you can create and open a Jupyter Notebook, connect to a remote Jupyter server for running code cells, and export a Jupyter Notebook as a Python file.
 
 ### Google Colab
+
 - [Pozdravljeni v storitvi Colab!](https://colab.research.google.com/?utm_source=scs-index#scrollTo=Nma_JWh-W-IF)

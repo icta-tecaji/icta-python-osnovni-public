@@ -1,15 +1,14 @@
 {
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.diagnosticMode": "workspace",
-    "flake8.importStrategy": "fromEnvironment",
-    "flake8.args": [
-        "--max-line-length=180",
-    ],
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-    }    
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "editor.formatOnSave": true,
+  "flake8.importStrategy": "fromEnvironment",
+  "flake8.args": ["--max-line-length=180"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  }
 }
