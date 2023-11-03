@@ -195,10 +195,13 @@ The most basic and easy way to run a Python script is by using the python comman
 
 So, the main difference between a module and a script is that **modules are meant to be imported**, while **scripts are made to be directly executed**.
 
-## Odstarnitev stare verzije Pythona
+## Odstranitev stare verzije Pythona
 Once Python has been installed, you can add or remove features through the Programs and Features tool that is part of Windows. Select the Python entry and choose “Uninstall/Change” to open the installer in maintenance mode.
 
 **Uninstall** will remove Python entirely, with the exception of the Python Launcher for Windows, which has its own entry in Programs and Features.
 
 Remove the PATH entry for the Python version you are removing.
  
+## Zagon Python skript iz Visual Studio Code
+- [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+
