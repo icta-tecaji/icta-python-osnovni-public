@@ -5,4 +5,3 @@ wheel
 flake8
 black
 isort
-notebook
