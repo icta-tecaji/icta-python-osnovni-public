@@ -17,5 +17,7 @@ You can use the `print()` function to display formatted messages onto the screen
 
 - [Basic Data Types in Python](https://realpython.com/python-data-types/)
 
-<!-- Uredi zadeve do konca -->
+
+## Input funkcija
+- 
 
