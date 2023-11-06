@@ -64,6 +64,8 @@ The execution policy sets how strict your system is about running scripts from o
 
 You may not see the warning, because the execution policy might already be set. To double-check your setting, you can run `Get-ExecutionPolicy`.
 
+> Without administrator privileges: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
 ## Namestitev najnovejše verzije Pythona
 
 Four Python 3.11 installers are available for download - two each for the 32-bit and 64-bit versions of the interpreter.
