@@ -16,3 +16,6 @@ You can use the `print()` function to display formatted messages onto the screen
 ## Osnovni podatkovni tipi
 
 - [Basic Data Types in Python](https://realpython.com/python-data-types/)
+
+<!-- Uredi zadeve do konca -->
+
