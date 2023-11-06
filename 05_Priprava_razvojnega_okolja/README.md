@@ -100,9 +100,7 @@ Click the **Run Python File in Terminal** play button in the top-right side of t
 Install the following extensions for VS Code:
 
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-- [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
-- [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
-- [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 Not all packages that you install during the development of your applications will be production dependencies. For example, you’ll probably want to test your application, so you need a test framework. A popular framework for testing is pytest. You want to install it in your development environment, but you don’t want it in your production environment, because it isn’t a production dependency.
@@ -114,9 +112,7 @@ wheel
 
 -r requirements.txt
 
-flake8
-black
-isort
+ruff
 ```
 
 Install the dependencies: `pip install -r requirements_dev.txt`
@@ -125,19 +121,22 @@ Create a `.vscode` folder in the project root. In the new folder create a file `
 
 ```json
 {
+  "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticMode": "workspace",
   "editor.formatOnSave": true,
-  "flake8.importStrategy": "fromEnvironment",
-  "flake8.args": ["--max-line-length=180"],
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "editor.tabSize": 4,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports.ruff": true,
+    "source.addMissingImports": true,
+    "source.formatDocument.ruff": true,
+    "source.fixAll.ruff": true
   },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
-  }
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.lint.args": ["--select=ALL", "--line-length=180"]
 }
+
 ```
 
 Try to save the file `hello.py` and see what happens.
