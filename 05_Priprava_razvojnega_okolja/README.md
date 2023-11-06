@@ -187,6 +187,8 @@ To work with Python in Jupyter Notebooks, you must activate an Anaconda environm
 
 Once the appropriate environment is activated, you can create and open a Jupyter Notebook, connect to a remote Jupyter server for running code cells, and export a Jupyter Notebook as a Python file.
 
+> [Markdown guide](https://www.markdownguide.org/basic-syntax/)
+
 ### Google Colab
 
 - [Pozdravljeni v storitvi Colab!](https://colab.research.google.com/?utm_source=scs-index#scrollTo=Nma_JWh-W-IF)
