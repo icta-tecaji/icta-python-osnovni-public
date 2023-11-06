@@ -1,6 +1,4 @@
-wheel
-
 -r requirements.txt
 
-ruff
-
+notebook==7.0.6
+ruff==0.1.4
