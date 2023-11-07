@@ -53,5 +53,5 @@ Vsebina za tečaj: Python osnovni tečaj
 ### [Izpis, spremenljivke, osnovni podatkovni tipi](./07_Izpis_spremenljivke_osnovni_podatkovni_tipi/README.md)
 - Izpis
 - Spremenljivke
-- Osnovni podatkovni tipi
+- Osnovni podatkovni tipi in operatorji
 - Input funkcija

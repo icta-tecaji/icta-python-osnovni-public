@@ -1,0 +1,2 @@
+- https://realpython.com/python-api/
+- https://realpython.com/python-download-file-from-url/

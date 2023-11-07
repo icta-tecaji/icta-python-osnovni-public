@@ -1,6 +1,9 @@
 
 
 - Conditionals
+- https://realpython.com/python-conditional-statements/
+- https://realpython.com/python-while-loop/
+- https://realpython.com/python-for-loop/
 
 ## Loops
 If you need to repeat a piece of code several times to get a final result, then you might need to use a **loop**. Loops are a common way of iterating multiple times and performing some actions in each iteration. Python provides two types of loops:

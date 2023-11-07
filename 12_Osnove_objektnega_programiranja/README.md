@@ -2,6 +2,7 @@
 
 
 
+- https://realpython.com/python3-object-oriented-programming/
 
 Speaking of dir(), you can use this function to inspect the methods and attributes that are available in a particular object:
 

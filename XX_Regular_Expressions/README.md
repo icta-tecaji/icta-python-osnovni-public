@@ -1,0 +1,2 @@
+- https://realpython.com/regex-python/
+- https://realpython.com/regex-python-part-2/

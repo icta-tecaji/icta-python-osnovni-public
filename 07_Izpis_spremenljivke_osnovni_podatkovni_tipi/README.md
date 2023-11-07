@@ -11,9 +11,9 @@ You can use the `print()` function to display formatted messages onto the screen
 - [How to Use Python: Your First Steps](https://realpython.com/python-first-steps/)
 - [Variables in Python](https://realpython.com/python-variables/)
 
-## Osnovni podatkovni tipi
-
+## Osnovni podatkovni tipi in operatorji
 - [Basic Data Types in Python](https://realpython.com/python-data-types/)
+- [Operators and Expressions in Python](https://realpython.com/python-operators-expressions/)
 
 ## Input funkcija
 - [Python input() Function](https://www.w3schools.com/python/ref_func_input.asp)
