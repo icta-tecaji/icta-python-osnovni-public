@@ -17,3 +17,6 @@ You can use the `print()` function to display formatted messages onto the screen
 
 ## Input funkcija
 - [Python input() Function](https://www.w3schools.com/python/ref_func_input.asp)
+
+## Calculator vaja
+- [Calculator](./calculator.py)
