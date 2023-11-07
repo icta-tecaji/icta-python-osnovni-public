@@ -1,0 +1,2002 @@
+{
+  "0": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/33]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "1": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/34]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "2": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/35]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "3": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/36]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "4": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/1]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "5": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/2]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "6": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/3]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "7": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/4]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "8": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/5]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "9": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/6]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "10": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/7]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "11": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/8]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "12": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/9]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "13": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/10]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "14": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/11]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "15": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/12]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "16": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/13]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "17": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/14]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "18": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/15]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "19": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/16]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "20": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/17]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "21": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/18]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "22": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/19]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "23": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/20]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "24": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/21]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "25": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/22]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "26": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/23]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "27": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/24]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "28": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/25]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "29": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/26]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "30": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/27]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "31": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/28]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "32": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/29]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "33": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/30]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "34": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/31]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "35": {
+    "dn": "topology/pod-1/node-201/sys/phys-[eth1/32]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "36": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/97]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "37": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/98]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "38": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/99]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "39": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/100]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "40": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/101]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "41": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/102]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "42": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/103]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "43": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/104]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "44": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/1]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "45": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/2]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "46": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/3]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "47": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/4]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "48": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/5]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "49": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/6]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "50": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/7]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "51": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/8]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "52": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/9]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "53": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/10]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "54": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/11]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "55": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/12]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "56": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/13]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "57": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/14]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "58": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/15]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "59": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/16]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "60": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/17]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "61": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/18]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "62": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/19]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "63": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/20]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "64": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/21]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "65": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/22]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "66": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/23]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "67": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/24]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "68": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/25]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "69": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/26]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "70": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/27]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "71": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/28]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "72": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/29]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "73": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/30]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "74": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/31]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "75": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/32]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "76": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/33]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "77": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/34]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "78": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/35]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "79": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/36]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "80": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/37]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "81": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/38]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "82": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/39]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "83": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/40]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "84": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/41]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "85": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/42]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "86": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/43]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "87": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/44]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "88": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/45]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "89": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/46]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "90": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/47]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "91": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/48]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "92": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/49]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "93": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/50]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "94": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/51]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "95": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/52]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "96": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/53]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "97": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/54]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "98": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/55]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "99": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/56]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "100": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/57]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "101": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/58]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "102": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/59]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "103": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/60]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "104": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/61]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "105": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/62]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "106": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/63]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "107": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/64]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "108": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/65]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "109": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/66]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "110": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/67]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "111": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/68]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "112": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/69]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "113": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/70]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "114": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/71]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "115": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/72]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "116": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/73]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "117": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/74]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "118": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/75]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "119": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/76]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "120": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/77]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "121": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/78]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "122": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/79]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "123": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/80]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "124": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/81]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "125": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/82]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "126": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/83]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "127": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/84]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "128": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/85]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "129": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/86]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "130": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/87]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "131": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/88]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "132": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/89]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "133": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/90]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "134": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/91]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "135": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/92]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "136": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/93]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "137": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/94]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "138": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/95]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "139": {
+    "dn": "topology/pod-1/node-103/sys/phys-[eth1/96]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "140": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/97]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "141": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/98]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "142": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/99]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "143": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/100]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "144": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/101]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "145": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/102]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "146": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/103]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "147": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/104]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "148": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/1]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "149": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/2]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "150": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/3]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "151": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/4]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "152": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/5]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "153": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/6]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "154": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/7]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "155": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/8]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "156": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/9]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "157": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/10]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "158": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/11]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "159": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/12]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "160": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/13]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "161": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/14]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "162": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/15]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "163": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/16]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "164": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/17]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "165": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/18]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "166": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/19]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "167": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/20]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "168": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/21]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "169": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/22]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "170": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/23]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "171": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/24]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "172": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/25]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "173": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/26]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "174": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/27]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "175": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/28]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "176": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/29]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "177": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/30]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "178": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/31]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "179": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/32]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "180": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/33]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "181": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/34]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "182": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/35]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "183": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/36]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "184": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/37]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "185": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/38]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "186": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/39]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "187": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/40]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "188": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/41]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "189": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/42]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "190": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/43]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "191": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/44]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "192": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/45]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "193": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/46]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "194": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/47]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "195": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/48]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "196": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/49]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "197": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/50]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "198": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/51]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "199": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/52]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "200": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/53]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "201": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/54]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "202": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/55]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "203": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/56]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "204": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/57]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "205": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/58]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "206": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/59]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "207": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/60]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "208": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/61]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "209": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/62]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "210": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/63]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "211": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/64]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "212": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/65]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "213": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/66]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "214": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/67]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "215": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/68]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "216": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/69]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "217": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/70]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "218": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/71]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "219": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/72]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "220": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/73]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "221": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/74]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "222": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/75]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "223": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/76]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "224": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/77]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "225": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/78]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "226": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/79]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "227": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/80]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "228": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/81]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "229": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/82]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "230": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/83]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "231": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/84]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "232": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/85]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "233": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/86]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "234": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/87]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "235": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/88]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "236": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/89]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "237": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/90]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "238": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/91]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "239": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/92]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "240": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/93]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "241": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/94]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "242": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/95]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "243": {
+    "dn": "topology/pod-1/node-104/sys/phys-[eth1/96]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "244": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/33]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "245": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/34]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "246": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/35]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "247": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/36]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "248": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/1]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "249": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/2]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "250": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/3]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "251": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/4]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "252": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/5]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "253": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/6]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "254": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/7]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "255": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/8]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "256": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/9]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "257": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/10]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "258": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/11]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "259": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/12]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "260": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/13]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "261": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/14]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "262": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/15]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "263": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/16]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "264": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/17]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "265": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/18]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "266": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/19]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "267": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/20]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "268": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/21]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "269": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/22]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "270": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/23]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "271": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/24]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "272": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/25]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "273": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/26]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "274": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/27]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "275": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/28]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "276": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/29]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "277": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/30]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "278": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/31]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "279": {
+    "dn": "topology/pod-1/node-200/sys/phys-[eth1/32]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "280": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/33]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "281": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/34]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "282": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/35]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "283": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/36]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "284": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/37]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "285": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/38]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "286": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/39]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "287": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/40]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "288": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/41]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "289": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/42]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "290": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/43]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "291": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/44]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "292": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/45]",
+    "speed": "1G",
+    "mtu": "9000"
+  },
+  "293": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/46]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "294": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/47]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "295": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/48]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "296": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/49]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "297": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/50]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "298": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/51]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "299": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/52]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "300": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/53]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "301": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/54]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "302": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/55]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "303": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/56]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "304": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/57]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "305": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/58]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "306": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/59]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "307": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/60]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "308": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/1]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "309": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/2]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "310": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/3]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "311": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/4]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "312": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/5]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "313": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/6]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "314": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/7]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "315": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/8]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "316": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/9]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "317": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/10]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "318": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/11]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "319": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/12]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "320": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/13]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "321": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/14]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "322": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/15]",
+    "speed": "1G",
+    "mtu": "9000"
+  },
+  "323": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/16]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "324": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/17]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "325": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/18]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "326": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/19]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "327": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/20]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "328": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/21]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "329": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/22]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "330": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/23]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "331": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/24]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "332": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/25]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "333": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/26]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "334": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/27]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "335": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/28]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "336": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/29]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "337": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/30]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "338": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/31]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "339": {
+    "dn": "topology/pod-1/node-102/sys/phys-[eth1/32]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "340": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/33]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "341": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/34]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "342": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/35]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "343": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/36]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "344": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/37]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "345": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/38]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "346": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/39]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "347": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/40]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "348": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/41]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "349": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/42]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "350": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/43]",
+    "speed": "inherit",
+    "mtu": "9000"
+  },
+  "351": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/44]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "352": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/45]",
+    "speed": "1G",
+    "mtu": "9000"
+  },
+  "353": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/46]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "354": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/47]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "355": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/48]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "356": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/49]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "357": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/50]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "358": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/51]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "359": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/52]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "360": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/53]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "361": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/54]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "362": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/55]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "363": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/56]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "364": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/57]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "365": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/58]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "366": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/59]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "367": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/60]",
+    "speed": "inherit",
+    "mtu": "9150"
+  },
+  "368": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/1]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "369": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/2]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "370": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/3]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "371": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/4]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "372": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/5]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "373": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/6]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "374": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/7]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "375": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/8]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "376": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/9]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "377": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/10]",
+    "speed": "1G",
+    "mtu": "9000"
+  },
+  "378": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/11]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "379": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/12]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "380": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/13]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "381": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/14]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "382": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/15]",
+    "speed": "1G",
+    "mtu": "9000"
+  },
+  "383": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/16]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "384": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/17]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "385": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/18]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "386": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/19]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "387": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/20]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "388": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/21]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "389": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/22]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "390": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/23]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "391": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/24]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "392": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/25]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "393": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/26]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "394": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/27]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "395": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/28]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "396": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/29]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "397": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/30]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "398": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/31]",
+    "speed": "10G",
+    "mtu": "9000"
+  },
+  "399": {
+    "dn": "topology/pod-1/node-101/sys/phys-[eth1/32]",
+    "speed": "10G",
+    "mtu": "9000"
+  }
+}

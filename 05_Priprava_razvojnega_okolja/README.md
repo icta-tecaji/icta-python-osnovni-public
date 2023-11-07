@@ -175,6 +175,8 @@ We will learn the following:
 - Adding Rich Content
 - Exporting Notebooks
 
+More information about Jupyter Notebooks: [Jupyter Notebook Tutorial](Jupyter_Notebook_tutorial.ipynb)
+
 ### Jupyter Notebooks in VS Code
 
 - [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
