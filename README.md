@@ -67,3 +67,11 @@ Vsebina za tečaj: Python osnovni tečaj
 ### [Flow control](./09_Flow_control/README.md)
 - Conditional Statements
 - Loops
+
+### [Funkcije](./10_Funkcije/README.md)
+- Defining Python Functions
+- Namespaces and Scope
+- Anonymous Functions
+- Type Hints
+- Functional Programming
+- Recursion
