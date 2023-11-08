@@ -1,0 +1,4 @@
+.dockerignore
+tests
+requirements_dev.txt
+Dockerfile

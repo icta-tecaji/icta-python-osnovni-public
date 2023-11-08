@@ -1,0 +1,20 @@
+https://linuxhint.com/building-your-own-network-monitor-with-pyshark/
+
+inštaliraš še TShark - https://lindevs.com/install-tshark-on-ubuntu/
+
+
+
+Ko zalaufaš:
+PermissionError: [Errno 13] Permission denied: '/usr/bin/dumpcap'
+SOlution:
+$ sudo chmod +x /usr/bin/dumpcap
+
+
+
+
+* https://github.com/KimiNewt/pyshark
+* https://subscription.packtpub.com/book/cloud_and_networking/9781789958096/2/ch02lvl1sec08/interacting-with-wireshark-with-pyshark
+
+
+
+

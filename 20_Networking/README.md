@@ -1,0 +1,5 @@
+- Websockets
+  - TODO
+  - https://fastapi.tiangolo.com/advanced/websockets/
+  - https://websockets.readthedocs.io/en/stable/
+  - https://medium.com/better-programming/how-to-create-a-websocket-in-python-b68d65dbd549

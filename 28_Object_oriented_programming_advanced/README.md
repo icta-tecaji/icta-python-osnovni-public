@@ -1,0 +1,4 @@
+- https://realpython.com/python-data-classes/
+- https://realpython.com/python-type-self/
+- https://realpython.com/python-callable-instances/
+- https://realpython.com/python-classes/#unlocking-polymorphism-with-common-interfaces
