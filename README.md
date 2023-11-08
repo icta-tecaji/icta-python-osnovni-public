@@ -64,3 +64,6 @@ Vsebina za tečaj: Python osnovni tečaj
 - Set
 - Strings
 
+### [Flow control](./09_Flow_control/README.md)
+- Conditional Statements
+- Loops

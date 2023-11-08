@@ -2,6 +2,7 @@
 
 ## Conditional Statements
 - [Conditional Statements in Python](https://realpython.com/python-conditional-statements/)
+- [The pass Statement: How to Do Nothing in Python](https://realpython.com/python-pass/)
 
 ## Loops
 - [Python "while" Loops (Indefinite Iteration)](https://realpython.com/python-while-loop/)
