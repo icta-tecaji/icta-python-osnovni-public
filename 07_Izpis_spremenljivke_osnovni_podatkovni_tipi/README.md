@@ -2,6 +2,7 @@
 
 ## Izpis
 - [Your Guide to the Python print() Function](https://realpython.com/python-print/)
+- [Basic Input, Output, and String Formatting in Python](https://realpython.com/python-input-output/)
 
 You can use the `print()` function to display formatted messages onto the screen and perhaps find some bugs. You can also use it to print the value of variables with or without string formatting.
 
@@ -18,5 +19,6 @@ You can use the `print()` function to display formatted messages onto the screen
 ## Input funkcija
 - [Python input() Function](https://www.w3schools.com/python/ref_func_input.asp)
 
-## Calculator vaja
-- [Calculator](./calculator.py)
+## Vaje
+- [Starost](./exercises/starost.py)
+- [Calculator](./exercises/basic_calculator.py)

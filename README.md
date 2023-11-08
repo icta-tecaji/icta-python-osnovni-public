@@ -55,3 +55,12 @@ Vsebina za tečaj: Python osnovni tečaj
 - Spremenljivke
 - Osnovni podatkovni tipi in operatorji
 - Input funkcija
+
+### [Napredni podatkovni tipi](./08_Napredni_podatkovni_tipi/README.md)
+- List
+- Tuple
+- Mutable vs. immutable
+- Dictionary
+- Set
+- Strings
+

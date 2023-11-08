@@ -1,32 +1,26 @@
+# Napredni podatkovni tipi
 
+## List
+- [Python's list Data Type: A Deep Dive With Examples](https://realpython.com/python-list/)
+- [Comparison of Lists and Tuples](https://realpython.com/python-operators-expressions/#comparison-of-lists-and-tuples)
 
+## Tuple
+- [Python's tuple Data Type: A Deep Dive With Examples](https://realpython.com/python-tuple/)
+- [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
+- [Python's "in" and "not in" Operators: Check for Membership](https://realpython.com/python-in-operator/#supporting-membership-tests-in-user-defined-classes)
 
+## Mutable vs. immutable
+- [Python's Mutable vs Immutable Types: What's the Difference?](https://realpython.com/python-mutable-vs-immutable-types/)
+- [Pointers in Python: What's the Point?](https://realpython.com/pointers-in-python/)
 
+## Dictionary
+- [Dictionaries in Python](https://realpython.com/python-dicts/)
 
-- List
-- Mutable vs. immutable
-    - https://realpython.com/python-mutable-vs-immutable-types/
-    - https://realpython.com/python-list/
-    - https://realpython.com/python-operators-expressions/#comparison-of-lists-and-tuples
-- Tuple
-    - Lists and Tuples in Python
-    - https://realpython.com/python-tuple/
-- Dictionary
-    - https://realpython.com/python-dicts/
-    - https://realpython.com/iterate-through-dictionary-python/
-- Set
-    - https://realpython.com/python-sets/
-    - Frozen set
-- Strings - uporaba string metod
-    - String formating
-    - https://realpython.com/python-strings/
-    - https://realpython.com/python-input-output/
-    - https://realpython.com/python-formatted-output/
-    - https://realpython.com/python312-f-strings/
-    - https://realpython.com/python-f-strings/
-    - https://realpython.com/python-operators-expressions/#membership-operators-and-expressions-in-python
+## Set
+- [Sets in Python](https://realpython.com/python-sets/)
 
-- https://realpython.com/python-in-operator/
-- https://realpython.com/python-operators-expressions/#concatenation-and-repetition-operators-and-expressions
-
-- Python Program Lexical Structure (https://realpython.com/python-program-structure/)
+## Strings
+- [Strings and Character Data in Python](https://realpython.com/python-strings/)
+- [A Guide to the Newer Python String Format Techniques](https://realpython.com/python-formatted-output/)
+- [Python 3.12 Preview: More Intuitive and Consistent F-Strings](https://realpython.com/python312-f-strings/)
+- [Python's F-String for String Interpolation and Formatting](https://realpython.com/python-f-strings/)
