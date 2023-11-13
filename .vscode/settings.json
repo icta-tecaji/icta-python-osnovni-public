@@ -2,6 +2,8 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticMode": "workspace",
+  "notebook.formatOnSave.enabled": false,
+  "notebook.formatOnCellExecution": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.tabSize": 4,
