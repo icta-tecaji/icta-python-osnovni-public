@@ -1,11 +1,11 @@
 # Procesiranje podatkov
 
 ## Comprehensions
-- https://realpython.com/list-comprehension-python/
+- [When to Use a List Comprehension in Python](https://realpython.com/list-comprehension-python/)
 
 ## Iterators and Iterables
-- https://realpython.com/python-iterators-iterables/
-- itertools
+- [Iterators and Iterables in Python: Run Efficient Iterations](https://realpython.com/python-iterators-iterables/)
+- [Itertools in Python 3, By Example](https://realpython.com/python-itertools/)
 
 ## Generators
 - [How to Use Generators and yield in Python](https://realpython.com/introduction-to-python-generators/)
@@ -14,5 +14,8 @@
 - [Generators: The Final Frontier](http://www.dabeaz.com/finalgenerator/)
 
 ## Working with float numbers 
-- How to Round Numbers in Python (https://realpython.com/python-rounding/#the-decimal-class)
-- https://realpython.com/python-flatten-list/
+- [How to Round Numbers in Python](https://realpython.com/python-rounding/#the-decimal-class)
+- [Decimal class](https://docs.python.org/3/library/decimal.html)
+
+## Data Manipulation
+- [How to Flatten a List of Lists in Python](https://realpython.com/python-flatten-list/)
