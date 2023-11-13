@@ -3,6 +3,7 @@
 ## Conditional Statements
 - [Conditional Statements in Python](https://realpython.com/python-conditional-statements/)
 - [The pass Statement: How to Do Nothing in Python](https://realpython.com/python-pass/)
+- [Python Switch Statement – Switch Case Example](https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/)
 
 ## Loops
 - [Python "while" Loops (Indefinite Iteration)](https://realpython.com/python-while-loop/)

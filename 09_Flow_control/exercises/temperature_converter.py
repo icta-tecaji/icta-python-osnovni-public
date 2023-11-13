@@ -22,14 +22,12 @@ Rešitev:
 ```
 """
 
-stopinje = float(input("Vnesi vrednost: "))
-enota = input("V katerih enotah je podana vrednost? [C/F]: ")
+temperature = float(input("Input temperature: "))
+unit = input("Input temperature unit [C/F]: ").upper()
 
-if enota == "C":
-    fahrenheit = stopinje * 9 / 5 + 32
-    print(f"{stopinje} {enota} je enako {fahrenheit} fahrenheit.")
-elif enota == "F":
-    celsius = (stopinje - 32) * 5 / 9
-    print(f"{stopinje} {enota} je enako {celsius} celsius.")
+if unit == "C":
+    print(f"{temperature} °C is {(temperature * 9/5) + 32} °F.")
+elif unit == "F":
+    print(f"{(temperature - 32) * 5/9} °C is {temperature} °F.")
 else:
-    print("Prišlo je do napake")
+    print(f"Error: {unit} is not a valid unit. Please use C or F.")
