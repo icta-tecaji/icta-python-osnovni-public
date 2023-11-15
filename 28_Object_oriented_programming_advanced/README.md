@@ -2,3 +2,6 @@
 - https://realpython.com/python-type-self/
 - https://realpython.com/python-callable-instances/
 - https://realpython.com/python-classes/#unlocking-polymorphism-with-common-interfaces
+- Inheritance and Composition: A Python OOP Guide (https://realpython.com/inheritance-composition-python/)
+- https://realpython.com/python-super/
+- https://realpython.com/python-class-constructor/
