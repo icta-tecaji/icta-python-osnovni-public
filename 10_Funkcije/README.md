@@ -15,6 +15,7 @@
 ## Type Hints
 - [Python Type Checking (Guide)](https://realpython.com/python-type-checking/)
 - [How to Use Type Hints for Multiple Return Types in Python](https://realpython.com/python-type-hints-multiple-types/)
+- mypi
 
 ## Functional Programming
 - [Functional Programming in Python: When and How to Use It](https://realpython.com/python-functional-programming/)
