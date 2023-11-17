@@ -1,6 +1,5 @@
-# Del 03: Context Managers
+# Context Managers
 
-- Intro & Overview
-- Context Manager Example (Opening Files)
-- Creating a Context Manager class
-- Understanding a Context Manager class
+## Intro into Context Managers
+- [Context Managers and Python's with Statement](https://realpython.com/python-with-statement/)
+
