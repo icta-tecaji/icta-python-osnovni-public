@@ -19,3 +19,4 @@
 
 ## Data Manipulation
 - [How to Flatten a List of Lists in Python](https://realpython.com/python-flatten-list/)
+- Zip, any, all
