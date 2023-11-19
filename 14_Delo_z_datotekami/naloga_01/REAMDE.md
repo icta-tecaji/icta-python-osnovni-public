@@ -1,2 +1,0 @@
-- Hočemo polja: `_id`, `model`, `factoryResetCounter`
-- filter: naprave kjer je model: `RAC2V1S`
