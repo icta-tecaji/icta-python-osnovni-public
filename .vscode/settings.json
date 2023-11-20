@@ -14,5 +14,6 @@
     "source.fixAll.ruff": true
   },
   "ruff.importStrategy": "fromEnvironment",
-  "ruff.lint.args": ["--select=ALL", "--line-length=180"]
+  "ruff.lint.args": ["--select=ALL", "--line-length=180"],
+  "ruff.format.args": ["--line-length=120"]
 }
