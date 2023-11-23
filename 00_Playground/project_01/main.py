@@ -1,77 +1,149 @@
+"""Main module of the project."""
 from __future__ import annotations
 
-import os
+import glob
 import sys
-from dataclasses import dataclass
-from pathlib import Path
+from typing import TYPE_CHECKING, Any
+
+from exporters.dataframe_exporter import DataFrameExporter
+from helpers.file_manipulation import FileInfo
+from helpers.file_manipulation import FileManipulationHelpers as fmh
+from parsers.log_type_parser import LogTypeParser
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
-@dataclass
-class FileInfo:
-    """Class to store file information."""
+def get_file_path_from_user() -> list[FileInfo]:
+    """Return the file path from the user."""
+    folder_name = input("Enter the name of the folder: ")
+    full_folder_path = fmh.get_absolute_path(__file__, folder_name)
+    if not fmh.validate_if_path_is_existing_folder(full_folder_path):
+        print("The data folder does not exist. Exiting...")
+        sys.exit(1)
 
-    file_id: int
-    name: str
-    path: Path
-    size: int
-    extension: str
+    parsable_files = fmh.get_all_files_from_folder(full_folder_path)
+    parsable_files_dict = {file.file_id: file for file in parsable_files}
+    fmh.print_folder_info(parsable_files)
+    file_select_mode = input("Enter select mode [1) id, 2) multiple, 3) glob pattern]: ")
+    file_ids = []
+
+    if file_select_mode == "1":
+        file_id = input("Enter the file ID: ")
+        try:
+            file_ids = [int(file_id, 10)]
+        except ValueError:
+            print("The file ID must be an integer. Exiting...")
+            sys.exit(1)
+    elif file_select_mode == "2":
+        file_ids = input("Enter the file IDs separated by a comma: ")
+        file_ids = file_ids.split(",")
+        try:
+            file_ids = [int(file_id, 10) for file_id in file_ids]
+        except ValueError:
+            print("The file IDs must be integers. Exiting...")
+            sys.exit(1)
+    elif file_select_mode == "3":
+        glob_pattern = input("Enter the glob pattern: ")
+        file_matches_ids = glob.glob(f"{full_folder_path}/{glob_pattern}")
+        for file in parsable_files:
+            if str(file.path) in file_matches_ids:
+                file_ids.append(file.file_id)
+
+    for file_id in file_ids:
+        if file_id not in parsable_files_dict:
+            print("The file ID does not exist. Exiting...")
+            sys.exit(1)
+
+    print(f"File to parse: {[file.name for file in parsable_files if file.file_id in file_ids]}")
+    return [parsable_files_dict[file_id] for file_id in file_ids]
 
 
-def get_absolute_path(relative_path: str) -> Path:
-    """Return the absolute path of a file or directory."""
-    return Path(__file__).parent / relative_path
+def load_and_parse_file(file: FileInfo) -> tuple[pd.DataFrame, Any]:
+    """Load and parse the file."""
+    if file.extension == "log":
+        parser = LogTypeParser(file.path)
+        return parser.load_data(), parser.load_metadata()
+
+    if file.extension == "txt":
+        pass
+
+    if file.extension == "xml":
+        pass
+
+    if file.extension == "xlsx":
+        pass
+
+    print("The file extension is not supported. Exiting...")
+    sys.exit(1)
 
 
-def validate_if_path_is_existing_folder(path: Path) -> bool:
-    """Validate if the path is an existing folder."""
-    return path.is_dir()
+def run_export_operation(
+    data: pd.DataFrame,
+    metadata: Any,
+    operation: int,
+    file_to_parse: FileInfo,
+    output_folder_name: str,
+) -> None:
+    """Run the export operation."""
+    output_folder = fmh.get_absolute_path(__file__, output_folder_name)
+    fmh.create_all_folders_in_path(output_folder)
+    exporter = DataFrameExporter(data, metadata.__dict__)
 
+    if operation == 1:
+        exporter.to_csv(output_folder / f"{file_to_parse.name}.csv")
+    elif operation == 2:
+        exporter.to_json(output_folder / f"{file_to_parse.name}.json")
+    elif operation == 3:
+        exporter.to_excel(output_folder / f"{file_to_parse.name}.xlsx")
+    elif operation == 4:
+        exporter.to_csv(output_folder / f"{file_to_parse.name}.csv")
+        exporter.to_json(output_folder / f"{file_to_parse.name}.json")
+        exporter.to_excel(output_folder / f"{file_to_parse.name}.xlsx")
+    else:
+        print("Invalid operation. Exiting...")
+        sys.exit(1)
 
-def get_all_files_from_folder(path: Path) -> list[FileInfo]:
-    """Return all files from a folder."""
-    results = []
-    with os.scandir(path) as dir_contents:
-        for file_id, entry in enumerate(dir_contents):
-            if entry.is_file():
-                file_info = FileInfo(
-                    file_id=file_id,
-                    name=entry.name,
-                    path=Path(entry.path),
-                    size=entry.stat().st_size,
-                    extension=entry.name.split(".")[-1],
-                )
-                results.append(file_info)
-    return results
-
-
-def print_file_info(file_info: FileInfo) -> None:
-    """Print file information."""
-    print(
-        f"  {file_info.file_id: <7}  |  {file_info.name[:22]+'...': <25}  |  {round(file_info.size/1024/1024, 4): <10}  MB |  {file_info.extension: <10}",
-    )
+    print(f"Done {file_to_parse.name}.")
 
 
 def main() -> None:
     """Entry point of the program."""
-    # Get folder name from user for the directory with the files
-    folder_name = input("Enter the name of the folder: ")
-    full_folder_path = get_absolute_path(folder_name)
-    print(f"Folder path: {full_folder_path}")
-    if validate_if_path_is_existing_folder(full_folder_path):
-        parsable_files = get_all_files_from_folder(full_folder_path)
-        print(
-            "  FILE ID  |          FILE NAME          |     FILE SIZE   |  FILE EXTENSION",
-        )
-        for file in parsable_files:
-            print_file_info(file)
-    else:
-        print("The folder does not exist. Exiting...")
-        sys.exit(1)
+    # 1. Get file path from user
+    file_to_parse = get_file_path_from_user()
 
-    # Get file id from user for the file to parse
-    file_id = int(input("Enter the file ID: "))
-    file_to_parse = parsable_files[file_id]
-    print(f"File to parse: {file_to_parse.name}")
+    # 2. Select operation to perform on the data
+    print("Select operation to perform on the data:")
+    print("1. Export to CSV")
+    print("2. Export to JSON")
+    print("3. Export to Excel")
+    print("4. Export to all formats")
+    print("5. Exit")
+    operation = input("Enter the operation number: ")
+
+    if operation in ("1", "2", "3", "4"):
+        output_folder_name = input("Enter the name of the output folder: ")
+
+    # 3. Parse and load the file
+    for file in file_to_parse:
+        print(f"Processing file: {file.name}")
+        data, metadata = load_and_parse_file(file)
+        if operation in ("1", "2", "3", "4"):
+            run_export_operation(data, metadata, int(operation, 10), file, output_folder_name)  # type: ignore
+        elif operation == "5":
+            sys.exit(0)
+        else:
+            print("Invalid operation. Exiting...")
+            sys.exit(1)
+
+    # Izdelava grafov - statčni graf x/y
+
+    # Zagon dinamične analize
+    # TODO: ponedeljek
+
+    # Web aplikacija za manipuliranje in analizo podatkov
+    # TODO: četrtek
 
 
-main()
+if __name__ == "__main__":
+    main()
