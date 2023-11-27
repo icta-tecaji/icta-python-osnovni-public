@@ -9,7 +9,7 @@ def logtime(func):
         result = func(*args, **kwargs)
         total_time = time.perf_counter() - start_time
         print(
-            f"[{time.time()}] Function {func.__name__} took {total_time:.2f} seconds."
+            f"[{time.time()}] Function {func.__name__} took {total_time:.2f} seconds.",
         )
         return result
 

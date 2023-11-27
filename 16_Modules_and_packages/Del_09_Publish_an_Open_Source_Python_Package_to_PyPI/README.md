@@ -1,1 +1,0 @@
-https://testdriven.io/blog/private-pypi/#uploading-and-downloading-without-auth

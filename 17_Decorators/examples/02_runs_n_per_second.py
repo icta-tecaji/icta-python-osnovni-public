@@ -16,7 +16,7 @@ def once_per_n_seconds(n_seconds):
             elapsed_time = time.perf_counter() - last_invoked
             if elapsed_time < n_seconds:
                 raise CalledTooOtfenError(
-                    f"Only {elapsed_time:.2f} seconds passed instead of {n_seconds} seconds."
+                    f"Only {elapsed_time:.2f} seconds passed instead of {n_seconds} seconds.",
                 )
             last_invoked = time.perf_counter()
             return func(*args, **kwargs)
