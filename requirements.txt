@@ -1,2 +1,4 @@
 pandas[excel]==2.1.3
 matplotlib
+lxml
+streamlit

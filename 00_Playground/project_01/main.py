@@ -9,6 +9,8 @@ from exporters.dataframe_exporter import DataFrameExporter
 from helpers.file_manipulation import FileInfo
 from helpers.file_manipulation import FileManipulationHelpers as fmh
 from parsers.log_type_parser import LogTypeParser
+from parsers.txt_type_parser import TxtTypeParser
+from parsers.xlsx_type_parser import XlsxTypeParser
 
 if TYPE_CHECKING:
     import pandas as pd
@@ -66,13 +68,12 @@ def load_and_parse_file(file: FileInfo) -> tuple[pd.DataFrame, Any]:
         return parser.load_data(), parser.load_metadata()
 
     if file.extension == "txt":
-        pass
-
-    if file.extension == "xml":
-        pass
+        parser = TxtTypeParser(file.path)
+        return parser.load_data(), None
 
     if file.extension == "xlsx":
-        pass
+        parser = XlsxTypeParser(file.path)
+        return parser.load_data(), None
 
     print("The file extension is not supported. Exiting...")
     sys.exit(1)
@@ -88,7 +89,7 @@ def run_export_operation(
     """Run the export operation."""
     output_folder = fmh.get_absolute_path(__file__, output_folder_name)
     fmh.create_all_folders_in_path(output_folder)
-    exporter = DataFrameExporter(data, metadata.__dict__)
+    exporter = DataFrameExporter(data, metadata.__dict__) if metadata is not None else DataFrameExporter(data)
 
     if operation == 1:
         exporter.to_csv(output_folder / f"{file_to_parse.name}.csv")
