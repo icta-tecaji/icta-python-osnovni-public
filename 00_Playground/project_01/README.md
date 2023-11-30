@@ -1,5 +1,4 @@
-
-
+# Aplikaicja
 
 `python main.py --input-folder ./data`
 
@@ -14,4 +13,10 @@ Izberite operacijo:
 - 2. Pretvorba datoteke v nek drugi format
 - 3. Izračun osnovnih statistik
 - 4. Izris osnovnih grafov
+
+
+## Namestitev
+- https://docs.docker.com/get-docker/: Commercial use of Docker Desktop in larger enterprises (more than 250 employees OR more than $10 million USD in annual revenue) requires a paid subscription.
+- `docker build -t myastreamlitapp .`
+- `docker run -p 80:8501 myastreamlitapp`
 

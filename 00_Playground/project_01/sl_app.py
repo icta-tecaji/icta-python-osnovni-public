@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import itertools
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog
@@ -7,6 +8,7 @@ from tkinter import filedialog
 import pandas as pd
 import streamlit as st
 from helpers.file_manipulation import FileManipulationHelpers as fmh
+from matplotlib import pyplot as plt
 from parsers.log_type_parser import LogTypeParser
 from parsers.txt_type_parser import TxtTypeParser
 from parsers.xlsx_type_parser import XlsxTypeParser
@@ -63,6 +65,7 @@ def save_temp_file_and_parse_to_df(
         data = parser.load_data()
     except Exception as e:
         st.error(f"Napaka pri branju datoteke: {e}")
+        return None
     else:
         return data
     finally:
@@ -70,9 +73,10 @@ def save_temp_file_and_parse_to_df(
             temp_file_path.unlink()
 
 
+# --------------------------------- APP --------------------------------- #
 st.title("Aplikacija za analizo meritev")
 
-# --------------------------------- APP --------------------------------- #
+
 # 1. IZBIRA MAPE ZA ANALIZO
 st.write("## Izbira mape za delo")
 st.write("Izberi mapo za delo s klikom na spodnji gumb.")
@@ -120,7 +124,6 @@ if st.session_state.full_folder_path:
                     )
 
     elif st.session_state.file_selection_type == "Izberi iz seznama":
-        # TODO: dodaj brisanje spremenljivk iz upload dela
         parsable_files = fmh.get_all_files_from_folder(st.session_state.full_folder_path)
         parsable_files_dict = {file.file_id: file for file in parsable_files}
         parsable_files_name_to_id_map = {file.name: file.file_id for file in parsable_files}
@@ -152,16 +155,83 @@ if (
     st.write("## Prikaz podatkov")
     st.write("Izbrana datoteka:", st.session_state.loaded_file.name)
     columns = st.multiselect("Izberite stolpce za prikaz:", st.session_state.main_data_frame.columns)
+    # if not columns:
+    #     columns = ["time"]
     selected_columns_names = [col for col in st.session_state.main_data_frame.columns if col in columns]
     if st.checkbox("Prikaži celotno tabelo"):
         selected_columns_names = st.session_state.main_data_frame.columns
-    st.dataframe(st.session_state.main_data_frame[selected_columns_names], use_container_width=True)
+    st.dataframe(
+        st.session_state.main_data_frame[selected_columns_names],
+        use_container_width=True,
+        # column_config={
+        #     "pu_voltage": st.column_config.ProgressColumn(
+        #         "pu_voltage",
+        #         help="Napetost na PU-ju",
+        #         format="%f",
+        #         min_value=2230,
+        #         max_value=2260,
+        #     ),
+        # },
+    )
 
     # 5. PRIKAZ GRAFOV
     st.write("## Prikaz grafov")
-    x_axis_column = st.selectbox("Izberite stolpec za x os:", st.session_state.main_data_frame.columns)
-    y_axis_column = st.selectbox("Izberite stolpec za y os:", st.session_state.main_data_frame.columns)
-    st.line_chart(st.session_state.main_data_frame, x=x_axis_column, y=y_axis_column)
+    prepared_graphs = {
+        "Brez": {},
+        "Kombinacija motor": {"x": "time", "y": ["motorspeed", "motorpower"]},
+    }
+    selected_graph = st.selectbox("Izberite graf:", list(prepared_graphs.keys()))
 
+    if selected_graph == "Brez":
+        # select only columns that are not NaN
+        columns = st.session_state.main_data_frame.columns
+        columns = [col for col in columns if not st.session_state.main_data_frame[col].isna().all()]
+        x_axis_column = st.selectbox("Izberite stolpec za x os:", columns)
+        y_axis_columns = st.multiselect("Izberite stolpec za y os:", columns)
+    else:
+        x_axis_column = prepared_graphs[selected_graph]["x"]
+        y_axis_columns = prepared_graphs[selected_graph]["y"]
+
+    if len(y_axis_columns) == 1:
+        # Plot the selected columns
+        fig, ax = plt.subplots()
+        for col in y_axis_columns:
+            ax.plot(st.session_state.main_data_frame[x_axis_column], st.session_state.main_data_frame[col], label=col)
+        ax.set_xlabel(x_axis_column)
+        ax.set_ylabel("Value")
+        ax.legend()
+        st.pyplot(fig)
+        st.line_chart(st.session_state.main_data_frame, x=x_axis_column, y=y_axis_columns[0])
+    elif len(y_axis_columns) > 1:
+        fig, ax = plt.subplots()
+        fig.subplots_adjust(right=0.75)
+        colors_generator = itertools.cycle(["b", "g", "r", "c", "m", "y", "k", "w"])
+        all_axes = [ax.twinx() for _ in range(len(y_axis_columns))]
+        for val, data in enumerate(zip(y_axis_columns, all_axes)):
+            name, ax = data
+            color = next(colors_generator)
+            ax.spines.right.set_position(("axes", 1 + (val * 0.25)))
+            ax.plot(
+                st.session_state.main_data_frame[x_axis_column],
+                st.session_state.main_data_frame[name],
+                color=color,
+            )
+            ax.set_ylabel(name, color=color)
+        st.pyplot(fig)
+        # fig_html = mpld3.fig_to_html(fig)
+        # components.html(fig_html, height=500, scrolling=True)
+
+    # vrednost1_limit_max = st.number_input("Vrednost 1 - limit max:", value=70000)
+    # vrednost2_limit_max = st.number_input("Vrednost 2 - limit max:", value=1000)
+
+    # fig, ax1 = plt.subplots(figsize=(9, 6))
+    # ax2 = ax1.twinx()
+    # ax1.plot(st.session_state.main_data_frame["time"], st.session_state.main_data_frame["motorspeed"], "g-")
+    # ax2.plot(st.session_state.main_data_frame["time"], st.session_state.main_data_frame["motorpower"], "b-")
+    # ax1.set_ylim(0, vrednost1_limit_max)
+    # ax2.set_ylim(0, vrednost2_limit_max)
+    # ax1.set_xlabel("time (s)")
+    # ax1.set_ylabel("voltage (g)", color="g")
+    # # st.pyplot(fig)
 
 # # deploy te aplikacije, da jo lahko uporabljamo na drugem računalniku

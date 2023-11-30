@@ -3,5 +3,3 @@ matplotlib
 lxml
 streamlit
 mpld3==0.5.9
-pyinstaller
-cx_Freeze
