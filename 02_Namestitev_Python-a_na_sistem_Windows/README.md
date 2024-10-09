@@ -6,7 +6,7 @@
 
 Unlike most Unix systems and services, **Windows does not include a system supported installation of Python**.
 
-Python 3.11 supports Windows 8.1 and newer. If you require Windows 7 support, please install Python 3.8.
+Python 3.12 supports Windows 8.1 and newer. If you require Windows 7 support, please install Python 3.8.
 
 There are a number of different installers available for Windows, each with certain benefits and downsides:
 - The **full installer** contains all components and is the best option for developers using Python for any kind of project.
@@ -68,7 +68,7 @@ You may not see the warning, because the execution policy might already be set. 
 
 ## Namestitev najnovejše verzije Pythona
 
-Four Python 3.11 installers are available for download - two each for the 32-bit and 64-bit versions of the interpreter.
+Four Python 3.13 installers are available for download - two each for the 32-bit and 64-bit versions of the interpreter.
 
 Download the installer from the [official Python download page](https://www.python.org/downloads/).
 
@@ -135,7 +135,7 @@ The launcher is compatible with all available versions of Python, so it does not
 - The command displays the currently installed version(s) of Python: `py --list`
 - If you have multiple versions of Python installed (e.g., 3.10 and 3.11) you will have noticed that Python 3.11 was started - to launch Python 3.10, try the command: `py -3.10`
 
-## Pyenv za Windows
+## Pyenv za Windows (najboljši način)
 - [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
 
 pyenv is a simple python version management tool. It lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
