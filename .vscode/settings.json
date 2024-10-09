@@ -8,10 +8,10 @@
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.tabSize": 4,
   "editor.codeActionsOnSave": {
-    "source.organizeImports.ruff": true,
-    "source.addMissingImports": true,
-    "source.formatDocument.ruff": true,
-    "source.fixAll.ruff": true
+    "source.organizeImports.ruff": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.formatDocument.ruff": "explicit",
+    "source.fixAll.ruff": "explicit"
   },
   "ruff.importStrategy": "fromEnvironment",
   "ruff.lint.args": ["--select=ALL", "--line-length=180"],

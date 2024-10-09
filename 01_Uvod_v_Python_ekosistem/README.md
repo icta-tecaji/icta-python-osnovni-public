@@ -207,7 +207,7 @@ Python 2 is no longer supported by the Python Software Foundation. The last majo
 - Views and iterators instead of lists
 - The rules for ordering comparisons have been simplified. E.g. a heterogeneous list cannot be sorted, because all the elements of a list must be comparable to each other.
 - There is only one integer type left, i.e. int. long is int as well.
-- The division of two integers returns a float instead of an integer. "//" can be used to have the "old" behaviour.
+- The division of two integers returns a float instead of an integer. "//" can be used to have the "old" behavior.
 - Text Vs. Data Instead Of Unicode Vs. 8-bit
 
 ### Python 3 versions
