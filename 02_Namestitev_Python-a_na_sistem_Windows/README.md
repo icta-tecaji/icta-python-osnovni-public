@@ -135,7 +135,7 @@ The launcher is compatible with all available versions of Python, so it does not
 - The command displays the currently installed version(s) of Python: `py --list`
 - If you have multiple versions of Python installed (e.g., 3.10 and 3.11) you will have noticed that Python 3.11 was started - to launch Python 3.10, try the command: `py -3.10`
 
-## Pyenv za Windows (najboljši način)
+## Pyenv za Windows
 - [pyenv for Windows](https://github.com/pyenv-win/pyenv-win)
 
 pyenv is a simple python version management tool. It lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
@@ -163,6 +163,33 @@ Set a version for a specific project:
 
 How to update pyenv. Run the following in a Powershell terminal: `&"${env:PYENV_HOME}\install-pyenv-win.ps1"`
 
+## Namestitev Pythona preko UV
+- [UV Docs](https://docs.astral.sh/uv/)
+- [Installing Python](https://docs.astral.sh/uv/guides/install-python/)
+
+An extremely fast Python package and project manager, written in Rust.
+- 🚀 A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.
+- ⚡️ 10-100x faster than pip.
+- 🐍 Installs and manages Python versions.
+- 🛠️ Runs and installs Python applications.
+- ❇️ Runs scripts, with support for inline dependency metadata.
+- 🗂️ Provides comprehensive project management, with a universal lockfile.
+- 🔩 Includes a pip-compatible interface for a performance boost with a familiar CLI.
+- 🏢 Supports Cargo-style workspaces for scalable projects.
+- 💾 Disk-space efficient, with a global cache for dependency deduplication.
+- ⏬ Installable without Rust or Python via curl or pip.
+- 🖥️ Supports macOS, Linux, and Windows.
+
+Install uv with our official standalone installer:
+- Linux and macOS: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+
+Update UV: `uv self update`
+
+Installation:
+- To view available and installed Python versions: `uv python list`
+- To install a specific Python version: `uv python install 3.12`
+
 ## Uvod v Python shell
 - [The Interpreter, an Interactive Shell](https://python-course.eu/python-tutorial/interpreter-interactive-shell.php)
 - [Interacting With Python](https://realpython.com/interacting-with-python/)
@@ -174,7 +201,6 @@ When commands are read from a tty, the interpreter is said to be in interactive 
 ![Shell](./images/img02.png)
 
 Now you can type Python commands into the shell. A simple command like `print("Hello World!")` will print the text `Hello World!` to the screen.
-
 
 When you work interactively, every expression and statement you type in is **evaluated and executed immediately**.
 
