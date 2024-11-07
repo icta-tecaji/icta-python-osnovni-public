@@ -31,6 +31,10 @@ Some of the most popular package management tools are:
 - [poetry](https://python-poetry.org/) is a relative newcomer to the Python package management scene. It’s a tool for managing Python dependencies and packaging Python applications.
 - [pipenv](https://pipenv.pypa.io/en/latest/) has most of the same basic operations as pip but thinks about packages a bit differently. When you install a package, pipenv adds that package to Pipfile and also adds more detailed information to a new lock file called Pipfile.lock. Lock files act as a snapshot of the precise set of packages installed, including direct dependencies as well as their sub-dependencies.
 
+## UV pip
+
+Manage Python packages with a pip-compatible interface. Add `uv` to the beginning of any pip command to run it.
+
 ## Uvod v orodje pip
 - [Using Python's pip to Manage Your Projects' Dependencies](https://realpython.com/what-is-pip/)
 - [Why you should use `python -m pip`](https://snarky.ca/why-you-should-use-python-m-pip/)

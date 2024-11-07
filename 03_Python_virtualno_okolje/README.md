@@ -42,6 +42,15 @@ You can see there are no packages installed in the global environment.
 
 If you want to go back into a virtual environment that you’ve created before, you again need to run the activate script of that virtual environment.
 
+## Namestitev virtualnega okolja UV
+
+Create a virtual environment.
+
+By default, creates a virtual environment named .venv in the working directory. An alternative path may be provided positionally.
+
+- Create a virtual environment in the current directory: `uv venv --python=python3.12.7`
+- Activate the virtual environment: `source venv/bin/activate` (Linux) or `.venv\Scripts\activate` (Windows)
+
 ## Zakaj potrebujemo virtualno okolje?
 
 The short answer is that **Python isn’t great at dependency management**. If you’re not specific, then pip will **place all the external packages that you install in a folder called `site-packages/`** in your base Python installation.

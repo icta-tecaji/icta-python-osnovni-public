@@ -2,8 +2,6 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticMode": "workspace",
-  "notebook.formatOnSave.enabled": false,
-  "notebook.formatOnCellExecution": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.tabSize": 4,
@@ -14,6 +12,14 @@
     "source.fixAll.ruff": "explicit"
   },
   "ruff.importStrategy": "fromEnvironment",
-  "ruff.lint.args": ["--select=ALL", "--line-length=180"],
-  "ruff.format.args": ["--line-length=120"]
+  "ruff.lint.args": [
+    "--select=ALL",
+    "--line-length=180",
+    "--ignore=N815,S105,D104",
+    "--extend-exclude=**/tests/**"
+  ],
+  "ruff.format.args": ["--line-length=135"],
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
 }
