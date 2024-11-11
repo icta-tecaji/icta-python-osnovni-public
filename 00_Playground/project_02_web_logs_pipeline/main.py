@@ -11,6 +11,8 @@ from pathlib import Path
 
 import httpx
 import pandas as pd
+from db.db import engine
+from ipinfo import get_metadata_for_ip
 from loguru import logger
 
 MAIN_DATA_FOLDER = Path(__file__).parent / "data"
@@ -46,8 +48,9 @@ def read_and_parse_raw_logs_data_pd(file_path: Path) -> pd.DataFrame:
     # Rename agent to user_agent
     raw_data.rename(columns={"agent": "user_agent"}, inplace=True)  # noqa: PD002
     logger.info(f"Reading and parsing raw logs took {time.time() - start_time:.2f} seconds.")
-    print(raw_data.head())
-    return raw_data
+    # Drop all private IPs and reset the index
+    raw_data = raw_data[~raw_data["client_ip"].str.startswith(("10.", "192.168", "172.", "127.0.0."))]
+    return raw_data.reset_index(drop=True)
 
 
 def read_and_parse_raw_logs_data(file_path: Path) -> list[dict]:
@@ -139,6 +142,24 @@ def download_raw_logs_data(link: str, local_file_path: Path) -> None:
             file.write(all_raw_data)
 
 
+def enrich_ip_data(data: pd.DataFrame) -> pd.DataFrame:
+    """Enrich IP data with additional information."""
+    start_time = time.time()
+    # Get unique IPs
+    unique_ips = data["client_ip"].unique()
+    logger.info(f"Enriching IP data for {len(unique_ips)} unique IPs.")
+    # Enrich IP data
+    all_ip_data = []
+    for ip in unique_ips:
+        ip_data = get_metadata_for_ip(ip)
+        if ip_data:
+            all_ip_data.append(ip_data.model_dump())
+    # Convert to DataFrame
+    ip_data_df = pd.DataFrame(all_ip_data)
+    logger.info(f"Enriching IP data took {time.time() - start_time:.2f} seconds.")
+    return data.merge(ip_data_df, left_on="client_ip", right_on="ip", how="left").drop(columns="ip")
+
+
 if __name__ == "__main__":
     logger.info("Starting web logs pipeline.")
     # Create main data folder if it does not exist
@@ -152,12 +173,10 @@ if __name__ == "__main__":
     # Pandas DataFrame
     parsed_data_pd = read_and_parse_raw_logs_data_pd(main_logs_file_path)
     print_basic_statistics_pd(parsed_data_pd)
+    # Enrich IP data
+    parsed_data_pd = enrich_ip_data(parsed_data_pd)
+    parsed_data_pd.to_sql("web_logs", engine, if_exists="replace", index=False)
+    logger.info("Web logs pipeline finished.")
 
-# imamo link z logi
-# prenesemo loge v lokalno datoteko
-# preberemo loge
-# preparsamo loge
-# podatke obogatimo (AI dodamo?)
-# podatke shranimo v bazo
 # nardimo analitiko nad podatki
 # prikaz grafikonov in dashbaorda
