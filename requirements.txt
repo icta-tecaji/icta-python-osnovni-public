@@ -3,3 +3,8 @@ loguru==0.7.2
 pandas==2.2.3
 pydantic==2.9.2
 SQLAlchemy==2.0.36
+ipykernel==6.29.5
+matplotlib==3.9.2
+geopandas==1.0.1
+shapely==2.0.6
+geodatasets==2024.8.0
