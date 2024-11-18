@@ -11,8 +11,36 @@ import uuid
 import httpx
 from loguru import logger
 from pydantic import BaseModel
+from sqlalchemy import DateTime, String, insert, update
+from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 BASE_IP_ENDPOINT_URL = "http://ip-api.com/json"
+engine = create_async_engine("sqlite+aiosqlite:///full_primer.db", echo=False)
+async_session = async_sessionmaker(engine)
+
+
+class Base(DeclarativeBase):
+    """Base class for database models."""
+
+
+class RestartedHostsModel(Base):
+    """Model for IP metadata."""
+
+    __tablename__ = "restarted_hosts"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    timestamp: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    instance_name: Mapped[str] = mapped_column(String(), nullable=False)
+    message_id: Mapped[str] = mapped_column(String(), nullable=False)
+    hostname: Mapped[str] = mapped_column(String(), nullable=False)
+    restarted: Mapped[bool] = mapped_column(String(), nullable=False, default=False)
+    acked: Mapped[bool] = mapped_column(String(), nullable=False, default=False)
+    country: Mapped[str] = mapped_column(String(), nullable=True)
+    city: Mapped[str] = mapped_column(String(), nullable=True)
+    organization: Mapped[str] = mapped_column(String(), nullable=True)
+    autonomous_system: Mapped[str] = mapped_column(String(), nullable=True)
 
 
 class IpMetadata(BaseModel):
@@ -77,45 +105,98 @@ class PubSubMessage:
         return f"PubSubEvent(instance_name={self.instance_name}, message_id={self.message_id})"
 
 
+@retry(
+    stop=stop_after_attempt(10),
+    wait=wait_fixed(1),
+    before_sleep=lambda _: logger.warning("Retrying save..."),
+)
 async def save(msg: PubSubMessage) -> None:
     """Save the message to a database."""
-    # Simulate saving a message to a database by waiting for a random amount of time
-    await asyncio.sleep(random.random())  # noqa: S311
     msg.saved = True
-    logger.info(f"Saved {msg.hostname} to the database")
+    async with async_session() as session:
+        stmt = insert(RestartedHostsModel).values(
+            timestamp=msg.timestamp,
+            instance_name=msg.instance_name,
+            message_id=msg.message_id,
+            hostname=msg.hostname,
+            restarted=msg.restarted,
+            acked=msg.acked,
+        )
+        await session.execute(stmt)
+        await session.commit()
+    logger.opt(colors=True).info(
+        f"<magenta>[{msg.hostname}] Saved successfully a server event in the database</magenta>",
+    )
 
 
-async def restart_host(msg: PubSubMessage) -> None:
+@retry(
+    stop=stop_after_attempt(10),
+    wait=wait_fixed(1),
+    before_sleep=lambda _: logger.warning("Retrying update_restart_data..."),
+)
+async def update_restart_data(msg: PubSubMessage, data: IpMetadata) -> None:
+    """Update the restarted data in the database."""
+    msg.restarted = True
+    async with async_session() as session:
+        stmt = (
+            update(RestartedHostsModel)
+            .where(RestartedHostsModel.message_id == msg.message_id)
+            .values(
+                restarted=msg.restarted,
+                country=data.country,
+                city=data.city,
+                organization=data.organization,
+                autonomous_system=data.autonomous_system,
+            )
+        )
+        await session.execute(stmt)
+        await session.commit()
+
+
+async def restart_host(msg: PubSubMessage) -> IpMetadata:
     """Restart a given host."""
     data = await get_metadata_for_ip(msg.hostname)
     msg.restarted = True
     logger.opt(colors=True).info(
         f"<magenta>[{msg.hostname}] Restarted successfully a server in {data.city} ({data.country})</magenta>",
     )
+    return data
 
 
-async def cleanup(msg: PubSubMessage) -> None:
+@retry(
+    stop=stop_after_attempt(10),
+    wait=wait_fixed(1),
+    before_sleep=lambda _: logger.warning("Retrying acknowledge..."),
+)
+async def acknowledge(msg: PubSubMessage) -> None:
     """Perform cleanup tasks."""
-    # Simulate cleanup by waiting for a random amount of time
-    await asyncio.sleep(random.random())  # noqa: S311
     msg.acked = True
+    async with async_session() as session:
+        stmt = update(RestartedHostsModel).where(RestartedHostsModel.message_id == msg.message_id).values(acked=msg.acked)
+        await session.execute(stmt)
+        await session.commit()
     logger.success(f"Done. Acked {msg}")
 
 
-def handle_results(results, msg: PubSubMessage) -> None:
+def check_results(results, msg: PubSubMessage) -> bool:
     """Handle the results of the message processing."""
     for result in results:
         if isinstance(result, IpMetadataOperationsError):
             logger.warning(f"[{msg.hostname}][IpMetadataOperationsError] An error occurred: {result}")
-        elif isinstance(result, Exception):
+            return False
+        if isinstance(result, Exception):
             logger.error(f"[{msg.hostname}] An error occurred: {type(result).__name__} - {result}")
+            return False
+    return True
 
 
 async def handle_message(msg: PubSubMessage) -> None:
     """Handle a Pub/Sub message."""
     results = await asyncio.gather(save(msg), restart_host(msg), return_exceptions=True)
-    handle_results(results, msg)
-    await cleanup(msg)
+    if check_results(results, msg) and isinstance(results[1], IpMetadata):
+        _, restart_hosts_data = results[0], results[1]
+        await update_restart_data(msg, restart_hosts_data)
+    await acknowledge(msg)
 
 
 def handle_exception(loop, context):
@@ -143,9 +224,16 @@ async def consume(queue) -> None:
     """Consume messages from a Pub/Sub topic."""
     while True:
         msg = await queue.get()
-
         logger.info(f"Consumed {msg}")
         asyncio.create_task(handle_message(msg))
+
+
+async def startup() -> None:
+    """Prepare the service for startup."""
+    logger.info("Creating database tables...")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    logger.success("Database tables created successfully!")
 
 
 async def shutdown(loop, signal=None) -> None:
@@ -159,6 +247,7 @@ async def shutdown(loop, signal=None) -> None:
     await asyncio.gather(*tasks, return_exceptions=True)
     logger.info("Flushing metrics")
     logger.warning("Closing database connections")
+    await engine.dispose()
     loop.stop()
 
 
@@ -166,6 +255,7 @@ def main():
     queue = asyncio.Queue()
     loop = asyncio.get_event_loop()
     loop.set_exception_handler(handle_exception)
+    loop.run_until_complete(startup())
 
     if os.name == "nt":
         logger.debug("Windows platform detected.")
