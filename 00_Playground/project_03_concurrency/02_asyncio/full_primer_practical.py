@@ -1,56 +1,97 @@
 from __future__ import annotations
 
 import asyncio
+import datetime
 import os
 import random
 import signal
 import string
 import uuid
 
+import httpx
 from loguru import logger
+from pydantic import BaseModel
+
+BASE_IP_ENDPOINT_URL = "http://ip-api.com/json"
+
+
+class IpMetadata(BaseModel):
+    """Model for IP metadata."""
+
+    ip: str
+    country: str | None
+    country_code: str | None
+    region: str | None
+    region_name: str | None
+    city: str | None
+    zip: str | None
+    lat: float | None
+    lon: float | None
+    isp: str | None
+    organization: str | None
+    autonomous_system: str | None
+
+
+class IpMetadataOperationsError(Exception):
+    """An exception indicating an error with the IP metadata operations."""
+
+
+async def get_metadata_for_ip(ip: str) -> IpMetadata:
+    """Get metadata for a given IP address."""
+    link = f"{BASE_IP_ENDPOINT_URL}/{ip}"
+    logger.info(f"Getting metadata for IP from API: {ip}")
+    async with httpx.AsyncClient() as client:
+        response = await client.get(link)
+        if response.status_code != httpx.codes.OK:
+            logger.error(f"Failed to get metadata for IP: {ip}, status code: {response.status_code}, response: {response.text}")
+            msg = f"Failed to get metadata for IP: {ip}, code: {response.status_code}"
+            raise IpMetadataOperationsError(msg)
+        ip_metadata = response.json()
+        if "countryCode" not in ip_metadata:
+            logger.error(f"Failed to get metadata for IP: {ip}, response: {ip_metadata}")
+            msg = f"Failed to get metadata for IP: {ip}, response: {ip_metadata}"
+            raise IpMetadataOperationsError(msg)
+        ip_metadata["ip"] = ip_metadata.pop("query")
+        ip_metadata["country_code"] = ip_metadata.pop("countryCode")
+        ip_metadata["region_name"] = ip_metadata.pop("regionName")
+        ip_metadata["organization"] = ip_metadata.pop("org")
+        ip_metadata["autonomous_system"] = ip_metadata.pop("as")
+        return IpMetadata.model_validate(ip_metadata)
 
 
 class PubSubMessage:
     """A message object that is sent via Pub/Sub."""
 
-    def __init__(self, instance_name: str, message_id: str, hostname: str | None = None) -> None:
+    def __init__(self, instance_name: str, message_id: str) -> None:
         """Initialize a PubSubMessage."""
+        self.timestamp: datetime.datetime = datetime.datetime.now(tz=datetime.timezone.utc)
         self.instance_name: str = instance_name
         self.message_id: str = message_id
-        self.hostname: str | None = hostname
+        self.hostname: str = ".".join(str(random.randint(0, 255)) for _ in range(4))  # noqa: S311
         self.restarted: bool = False
         self.saved: bool = False
         self.acked: bool = False
-        if hostname is None:
-            self.hostname = f"{self.instance_name}.example.net"
 
     def __str__(self) -> str:
         """Return a string representation of the PubSubMessage."""
         return f"PubSubEvent(instance_name={self.instance_name}, message_id={self.message_id})"
 
 
-class RestartFailedError(Exception):
-    """An exception indicating that the host restart failed."""
-
-
 async def save(msg: PubSubMessage) -> None:
     """Save the message to a database."""
     # Simulate saving a message to a database by waiting for a random amount of time
     await asyncio.sleep(random.random())  # noqa: S311
-    if random.randint(1, 20) == 5:
-        raise Exception("Could not process message")
     msg.saved = True
     logger.info(f"Saved {msg.hostname} to the database")
 
 
 async def restart_host(msg: PubSubMessage) -> None:
     """Restart a given host."""
-    # Simulate restarting a host by waiting for a random amount of time
-    await asyncio.sleep(random.random())  # noqa: S311
+    data = await get_metadata_for_ip(msg.hostname)
     msg.restarted = True
-    if random.randint(0, 8) == 5:
-        raise RestartFailedError(f"Could not restart {msg.hostname}")
-    logger.info(f"Restarted {msg.hostname}")
+    logger.opt(colors=True).info(
+        f"<magenta>[{msg.hostname}] Restarted successfully a server in {data.city} ({data.country})</magenta>",
+    )
 
 
 async def cleanup(msg: PubSubMessage) -> None:
@@ -64,10 +105,10 @@ async def cleanup(msg: PubSubMessage) -> None:
 def handle_results(results, msg: PubSubMessage) -> None:
     """Handle the results of the message processing."""
     for result in results:
-        if isinstance(result, RestartFailedError):
-            logger.error(f"Restart failed for host {msg.hostname}")
+        if isinstance(result, IpMetadataOperationsError):
+            logger.warning(f"[{msg.hostname}][IpMetadataOperationsError] An error occurred: {result}")
         elif isinstance(result, Exception):
-            logger.error(f"Handling general error: {result}")
+            logger.error(f"[{msg.hostname}] An error occurred: {type(result).__name__} - {result}")
 
 
 async def handle_message(msg: PubSubMessage) -> None:
