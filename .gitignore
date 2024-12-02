@@ -1,6 +1,7 @@
 web_logs_*
 full_primer.db
 logs_data.db
+meritve.db
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

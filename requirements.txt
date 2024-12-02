@@ -13,3 +13,6 @@ numba==0.60.0
 aiosqlite==0.20.0
 tenacity==9.0.0
 aiofile==3.9.0
+fastapi[standard]==0.115.5
+streamlit
+mpld3
