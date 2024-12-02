@@ -8,4 +8,10 @@ PyInstaller is tested against Windows, MacOS X, and Linux.
 
 However, it is not a cross-compiler; to make a Windows app you run PyInstaller on Windows, and to make a Linux app you run it on Linux, etc.
 
+## Installation
+
+```bash
+uv pip install pyinstaller
+```
+
 ## Minimal example
