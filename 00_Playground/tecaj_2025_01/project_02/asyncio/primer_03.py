@@ -49,6 +49,8 @@ async def restart_host(message: PubSubMessage) -> None:
     """Restart a host."""
     await asyncio.sleep(random.random())
     message.restarted = True
+    if random.randrange(1, 5) == 2:
+        raise ValueError("Virtual machine not found.")
     logger.debug(f"RESTARTED: {message.instance_name}")
 
 
@@ -56,6 +58,8 @@ async def save(message: PubSubMessage) -> None:
     """Save the message to the database."""
     await asyncio.sleep(random.random())
     message.saved = True
+    if random.randrange(1, 21) == 10:
+        raise Exception("Could not process the message.")
     logger.debug(f"SAVED: {message.instance_name}")
 
 
@@ -66,9 +70,19 @@ async def cleanup(message: PubSubMessage) -> None:
     logger.success(f"Messaged {message.instance_name} has been successfully processed.")
 
 
+def handle_results(results, msg):
+    """Handle the results of the tasks."""
+    for result in results:
+        if isinstance(result, ValueError):
+            logger.warning(f"Error restarting {msg.instance_name}: {result}")
+        elif isinstance(result, Exception):
+            logger.error(f"Error saving {msg.instance_name}: {result}")
+
+
 async def handle_message(message: PubSubMessage) -> None:
     """Handle a message."""
-    await asyncio.gather(restart_host(message), save(message))
+    results = await asyncio.gather(restart_host(message), save(message), return_exceptions=True)
+    handle_results(results, message)
     await cleanup(message)
 
 
@@ -80,10 +94,30 @@ async def consume(queue: asyncio.Queue):
         asyncio.create_task(handle_message(message))
 
 
+def handle_exception(loop, context):
+    """Handle exceptions."""
+    msg = context.get("exception", context["message"])
+    logger.error(f"Caught exception: {msg}")
+    logger.error("Shutting down the event loop.")
+    asyncio.create_task(shutdown(loop))
+
+
+async def shutdown(loop) -> None:
+    """Shutdown the event loop."""
+    logger.info("Shutting down the event loop...")
+    tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
+    [task.cancel() for task in tasks]
+    logger.info(f"Cancelled {len(tasks)} outstanding tasks.")
+    await asyncio.gather(*tasks, return_exceptions=True)
+    logger.success("Successfully stopped all tasks.")
+    loop.stop()
+
+
 def main():
     """Main entrypoint of the application."""
     queue = asyncio.Queue()
     loop = asyncio.get_event_loop()
+    loop.set_exception_handler(handle_exception)
 
     try:
         loop.create_task(simulate_publish(queue))
@@ -91,6 +125,7 @@ def main():
         loop.run_forever()
     except KeyboardInterrupt:
         logger.info("Received a keyboard interrupt. Exiting...")
+        loop.run_until_complete(shutdown(loop))
     finally:
         loop.close()
         logger.success("Successfully shutdown the event loop.")
